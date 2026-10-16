@@ -1,0 +1,68 @@
+body{ 
+  background-image: url(/static/img/fondo_inicio_pc.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic Viewport Height para adaptarse a las barras del navegador móvil */
+  margin: 0;
+  padding: 0;
+}
+.eticketa{position: relative; width: 800px; height:auto; left:410px;top:50px;}
+form{position: relative; left: 800px;}
+
+
+
+.btn-inicio{display: inline-flex;
+    margin: 5px;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 12px 24px; position:relative; left: -60px;
+    background: linear-gradient(135deg, #1e5bb8 0%, #15458c 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(57, 117, 207, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;}
+
+.btn-inicio:hover {background: linear-gradient(135deg, #2a6fd6 0%, #174ea6 100%);box-shadow: 0 6px 16px rgba(30, 91, 184, 0.35);
+  transform: translateY(-2px);
+}
+.btn-inicio:active {transform: translateY(0) scale(0.98);box-shadow: 0 2px 6px rgba(30, 91, 184, 0.2);
+}
+
+
+
+@media (max-width:758px){
+  body{
+    background-image:url(/static/img/fondo_inicio_movil.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  .eticketa{position: relative; width: 700px; height:auto; left:-100px; max-width: 700px;}
+.btn-inicio{display: inline-flex;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 12px 24px; position:relative; left: 200px; 
+    background: linear-gradient(135deg, #1e5bb8 0%, #15458c 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(57, 117, 207, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;}
+  .btn-inicio:hover {background: linear-gradient(135deg, #2a6fd6 0%, #174ea6 100%);box-shadow: 0 6px 16px rgba(30, 91, 184, 0.35);
+  transform: translateY(-2px);}
+  .btn-inicio:active {transform: translateY(0) scale(0.98);box-shadow: 0 2px 6px rgba(30, 91, 184, 0.2);}
+  
+}

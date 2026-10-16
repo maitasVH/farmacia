@@ -1,0 +1,40 @@
+body{ 
+  background-image: url(/static/img/fondo_inicio_pc.png);
+  background-position: center;
+  background-repeat: no-repeat;width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic Viewport Height para adaptarse a las barras del navegador móvil */
+  margin: 0;
+  padding: 0;
+  background-color: rgb(160, 195, 209);
+  font-family:  "Isometra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+table{
+  border-collapse: collapse;
+  cursor: pointer;
+  margin: 50px auto 0px auto;
+}
+td, th{padding: 20px;}
+tr{transition: background-color 0.3s ease;}
+tr:hover{background-color: #43af39a0;} 
+table thead{
+  background-color: #214a87;
+  color:#fff;
+  border: 1px solid #fff;
+}
+table tbody{
+  background-color: #68abc2;
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+h1{color: black; text-align: center; }
+.cruzVerde{
+  position:relative;
+  width: 150px;
+  height: auto;
+  left: 1000px;
+  top: 120px;
+}

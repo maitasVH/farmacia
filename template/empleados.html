@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles2.css">
+    <title>empleados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="cruzVerde" src="/static/img/cruz_verde_stk.png">
+    <h1>Administración de Empleados</h1>
+    
+<!--tabla de administración-->
+<table border = "1">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>edad</th>
+            <th>especialidad</th>
+            <th>asistencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for empleado in empleados %}
+        <tr>
+            <td>{{ empleado.id }}</td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.apellido }}</td>
+            <td>{{ empleado.edad }}</td>
+            <td>{{ empleado.especialidad }}</td>
+            <td>{{ empleado.asiste }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="6">No hay empleados registrados.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

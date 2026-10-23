@@ -17,7 +17,7 @@
 <table border = "1">
     <thead>
         <tr>
-            <th>id</th>
+            
             <th>nombre</th>
             <th>categoria</th>
             <th>cantidad</th>
@@ -28,7 +28,7 @@
     <tbody>
         {% for medicamento in medicamentos %}
         <tr>
-            <td>{{ medicamento.id }}</td>
+            
             <td>{{ medicamento.nombre }}</td>
             <td>{{ medicamento.categoria }}</td>
             <td>{{ medicamento.cantidad }}</td>
@@ -41,6 +41,17 @@
         </tr>
         {% endfor %}
     </tbody>
+    
 </table>
+
+<a href="/">
+    <button class="btn-regreso1">volver</button>
+</a>
+
+<a href="/registro-medicamento">
+    <button class="btn-1">registrar medicamentos</button>
+</a>    
+
+
 </body>
 </html>

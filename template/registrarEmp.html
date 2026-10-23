@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar_Empleado</title>
+    <link rel="stylesheet" href="/static/styles3.css">
+
+</head>
+<body class="pagina-form">
+
+    <h1>Registrar empleado</h1>
+ 
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+ 
+    <form method="post" action="/registro-empleado">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="{{ datos.get('nombre', '') }}" required>
+ 
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" value="{{ datos.get('apellido', '') }}" required>
+ 
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="18" max="100" value="{{ datos.get('edad', '') }}" required>
+ 
+        <label for="especialidad">Especialidad</label>
+        <input type="text" id="especialidad" name="especialidad" value="{{ datos.get('especialidad', '') }}" required>
+ 
+        <label for="asiste">Días que asiste</label>
+        <input type="text" id="asiste" name="asiste" placeholder="Ej: martes y jueves" value="{{ datos.get('asiste', '') }}" required>
+ 
+        <button type="submit">Guardar empleado</button>
+    </form>
+</body>
+</html>

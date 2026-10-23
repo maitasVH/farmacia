@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, render_template, request
+from flask import Blueprint, jsonify, redirect, render_template, request, url_for
 from models import Empleado, Medicamento, db
 
 
@@ -25,6 +25,67 @@ def index():
 def administracion():
     medicamentos = Medicamento.query.all()
     return render_template("administración.html", medicamentos=medicamentos)
+
+@vistas.route("/registro-medicamento", methods=["GET", "POST"])
+def registro_medicamento():
+    if request.method == "POST":
+        datos = request.form
+        if faltantes(datos, CAMPOS_MEDICAMENTO):
+            return render_template(
+                "registrarMed.html",
+                error="Completa todos los campos",
+                datos=datos,
+            )
+        try:
+            precio = int(datos["precio"])
+        except ValueError:
+            return render_template(
+                "registrarMed.html",
+                error="El precio debe ser un número entero",
+                datos=datos,
+            )
+        medicamento = Medicamento(
+            nombre=datos["nombre"].strip(),
+            categoria=datos["categoria"].strip(),
+            cantidad=datos["cantidad"].strip(),
+            dosis=datos["dosis"].strip(),
+            precio=precio,
+        )
+        db.session.add(medicamento)
+        db.session.commit()
+        return redirect(url_for("vistas.administracion", ok=1))
+    return render_template("registrarMed.html", datos={})
+
+@vistas.route("/registro-empleado", methods=["GET", "POST"])
+def registro_empleado():
+    if request.method == "POST":
+        datos = request.form
+        if faltantes(datos, CAMPOS_EMPLEADO):
+            return render_template(
+                "registrarEmp.html",
+                error="Completa todos los campos",
+                datos=datos,
+            )
+        try:
+            edad = int(datos["edad"])
+        except ValueError:
+            return render_template(
+                "registrarEmp.html",
+                error="La edad debe ser un número entero",
+                datos=datos,
+            )
+        empleado = Empleado(
+            nombre=datos["nombre"].strip(),
+            apellido=datos["apellido"].strip(),
+            edad=edad,
+            especialidad=datos["especialidad"].strip(),
+            asiste=datos["asiste"].strip(),
+        )
+        db.session.add(empleado)
+        db.session.commit()
+        return redirect(url_for("vistas.empleados", ok=1))
+    return render_template("registrarEmp.html", datos={})
+
 
 
 @vistas.route("/empleados")

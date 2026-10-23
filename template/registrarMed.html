@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar_Medicamento</title>
+    <link rel="stylesheet" href="/static/styles3.css">
+</head>
+<body class="pagina-form">
+
+    <h1>Registrar medicamento</h1>
+ 
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+ 
+    <form method="post" action="/registro-medicamento">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="{{ datos.get('nombre', '') }}" required>
+ 
+        <label for="categoria">Categoría</label>
+        <input type="text" id="categoria" name="categoria" value="{{ datos.get('categoria', '') }}" required>
+ 
+        <label for="cantidad">Cantidad</label>
+        <input type="text" id="cantidad" name="cantidad" value="{{ datos.get('cantidad', '') }}" required>
+ 
+        <label for="dosis">Dosis</label>
+        <input type="text" id="dosis" name="dosis" value="{{ datos.get('dosis', '') }}" required>
+ 
+        <label for="precio">Precio</label>
+        <input type="number" id="precio" name="precio" min="0" value="{{ datos.get('precio', '') }}" required>
+ 
+        <button type="submit">Guardar medicamento</button>
+    </form>
+</body>
+</html>

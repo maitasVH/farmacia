@@ -38,3 +38,119 @@ h1{color: black; text-align: center; }
   left: 1000px;
   top: 120px;
 }
+.btn-1{display: inline-flex;
+    margin: 5px;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 12px 24px; position:relative; left: 640px; top:-290px;
+    background: linear-gradient(135deg, #1e5bb8 0%, #15458c 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(57, 117, 207, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;}
+  .btn-regreso1{
+    display: inline-flex;
+    margin: 5px;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 12px 24px; position:relative; left: 640px; top:-290px;
+    background: linear-gradient(135deg, #1e5bb8 0%, #15458c 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(57, 117, 207, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+.btn-2{
+  position:absolute;
+  padding: 12px 24px;
+  left:700px;
+  top:220px;
+  background: linear-gradient(135deg, #1e5bb8 0%, #15458c 100%);
+  color:#fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(57, 117, 207, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  
+}
+.btn-regreso2{
+  position:absolute;
+  padding: 12px 24px;
+  top:220px;
+  left:600px;
+  background: linear-gradient(135deg, #1e5bb8 0%, #15458c 100%);
+  color:#fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(57, 117, 207, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+@media (max-width:758px){
+  /*empleados*/
+  body{ 
+  background-image: url(/static/img/fondo_inicio_movil.png);
+  background-position: center;
+  background-repeat: no-repeat;width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic Viewport Height para adaptarse a las barras del navegador móvil */
+  margin: 0;
+  padding: 0;
+  background-color: rgb(160, 195, 209);
+  font-family:  "Isometra", serif;
+  font-weight: 400;
+  font-style: normal; 
+ }
+table{
+  border-collapse: collapse;
+  cursor: pointer;
+  margin: 150px auto 0px auto;
+ }
+td, th{padding: 10px;}
+.cruzVerde{
+  position:absolute;
+  width: 100px;
+  height: auto;
+  left: 190px;
+  top: 55px;
+ }
+ .btn-1{
+  position: absolute;
+  left: 80px;
+  top: 150px;
+ }
+.btn-2{
+  position:absolute;
+  left: 100px;
+  top: 150px;
+ }
+ .btn-regreso1{
+  position: absolute;
+  left: 280px;
+  top: 150px;
+ }
+.btn-regreso2{
+  position: absolute;
+  left: 280px;
+  top: 150px;
+ }
+ /*administracion medicamento*/
+ 
+}
